@@ -1,0 +1,77 @@
+<MainGrid>
+   GridLayout:
+      cols:1
+      size: root.width, root.height
+      
+      GridLayout:
+         cols:2
+         size_hint:1,0.15
+         canvas.before:
+            Color:
+               rgba: 49/255,235/225,220/225,1
+            Rectangle:
+               pos: self.pos
+               size: self.size
+
+         TextInput:
+            padding:5,5
+         Image:
+            source:"lupa.png"
+            size_hint:0.3,0.3
+
+      
+      GridLayout:
+         cols:3
+         row_default_height:40
+         row_force_default:True
+         Button:
+            background_normal:""
+            background_color: 219/255,247/225,38/225,1
+            text:"Faciles"
+            bold:True
+            color:0,0,0,1           
+         Button:
+            text:"Pocos\n Ingredientes"
+            halign:"center"
+            bold:True
+            color:0,0,0,1
+            background_color: 88/255,242/225,64/225,1
+            background_normal:""
+         Button:
+            text:"Rapidas"
+            bold:True
+            color:0,0,0,1
+            background_color: 219/255,247/225,38/225,1
+            background_normal:""
+      GridLayout:
+         row_default_height:100
+         row_force_default:True
+         cols: 2
+         Label:
+            text:"Rapidas"
+         Image:
+            source:"prueba.jpg"
+         Label:
+            text:"Rapidas"
+         Image:
+            source:"prueba.jpg"
+         Label:
+            text:"Rapidas"
+         Image:
+            source:"prueba.jpg"
+         Label:
+            text:"Rapidas"
+         Image:
+            source:"prueba.jpg"
+         
+      Label:
+         text:"Como en casa"
+         bold:True
+         color:0,0,0,1
+         canvas.before:
+            Color:
+               rgba: 49/255,235/225,220/225,1
+            Rectangle:
+               pos: self.pos
+               size: self.size
+         size_hint:1,0.15
