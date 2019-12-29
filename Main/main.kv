@@ -1,5 +1,9 @@
-<GridButton>:
-<MainGrid>
+WindowManager:
+   MainWindow:
+   RecipesWindow:
+
+<MainWindow>
+   name:"main"
    GridLayout:
       cols:1
       size: root.width, root.height
@@ -43,163 +47,225 @@
             color:0,0,0,1
             background_color: 219/255,247/225,38/225,1
             background_normal:""
+
+      ScrollView:      
+         GridLayout:
+            size_hint_y: None
+            row_default_height:root.height*0.025
+            height:self.minimum_height
+            cols: 1
+            rows: 8
+            GridButton:
+               size_hint_y:None
+               row_default_height: root.height*0.15
+               height:self.minimum_height
+               cols: 2
+               padding:10
+               on_release:app.root.current = "recipes"
+               GridLayout:
+                  size_hint_x:2
+                  cols:1
+                  rows:3
+                  Label:
+                     text:"Titulo de la Receta"
+                     font_size: 20
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'top'
+                     color:0,0,0,1
+                  Label:
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'middle'
+                     text:"Esta es una breve descripcion de la receta"
+                     color:0,0,0,1
+                  Label:
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'bottom'
+                     text:"Filtro 1, Filtro 2, Filtro 3."
+                     color:0,0,0,1
+               Image:
+                  source:"prueba.jpg"
+                  
+            Label:
+               canvas.before:
+                  Color: 
+                     rgba: 207/225, 207/225, 207/225, 1
+                  Rectangle:
+                     size: self.size
+                     pos: self.pos
+               size_hint_y:None
+               height:5
+              
+
+            GridButton:
+               size_hint_y:None
+               row_default_height: root.height*0.15
+               height:self.minimum_height
+               cols: 2
+               padding:10
+               on_press:root.mycall_back()
+               GridLayout:
+                  size_hint_x:2
+                  cols:1
+                  rows:3
+                  Label:
+                     text:"Titulo de la Receta"
+                     font_size: 20
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'top'
+                     color:0,0,0,1
+                  Label:
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'middle'
+                     text:"Esta es una breve descripcion de la receta"
+                     color:0,0,0,1
+                  Label:
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'bottom'
+                     text:"Filtro 1, Filtro 2, Filtro 3."
+                     color:0,0,0,1
+               Image:
+                  source:"prueba.jpg"
+                  
+            Label:
+               canvas.before:
+                  Color: 
+                     rgba: 207/225, 207/225, 207/225, 1
+                  Rectangle:
+                     size: self.size
+                     pos: self.pos
+               size_hint_y:None
+               height:5
+
+            GridButton:
+               size_hint_y:None
+               row_default_height: root.height*0.15
+               height:self.minimum_height
+               cols: 2
+               padding:10
+               on_press:root.mycall_back()
+               GridLayout:
+                  size_hint_x:2
+                  cols:1
+                  rows:3
+                  Label:
+                     text:"Titulo de la Receta"
+                     font_size: 20
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'top'
+                     color:0,0,0,1
+                  Label:
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'middle'
+                     text:"Esta es una breve descripcion de la receta"
+                     color:0,0,0,1
+                  Label:
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'bottom'
+                     text:"Filtro 1, Filtro 2, Filtro 3."
+                     color:0,0,0,1
+               Image:
+                  source:"prueba.jpg"
+                  
+            Label:
+               canvas.before:
+                  Color: 
+                     rgba: 207/225, 207/225, 207/225, 1
+                  Rectangle:
+                     size: self.size
+                     pos: self.pos
+               size_hint_y:None
+               height:5         
+            GridButton:
+               size_hint_y:None
+               row_default_height: root.height*0.15
+               height:self.minimum_height
+               cols: 2
+               padding:10
+               on_press:root.mycall_back()
+               GridLayout:
+                  size_hint_x:2
+                  cols:1
+                  rows:3
+                  Label:
+                     text:"Titulo de la Receta"
+                     font_size: 20
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'top'
+                     color:0,0,0,1
+                  Label:
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'middle'
+                     text:"Esta es una breve descripcion de la receta"
+                     color:0,0,0,1
+                  Label:
+                     text_size: self.size
+                     halign: 'left'
+                     valign: 'bottom'
+                     text:"Filtro 1, Filtro 2, Filtro 3."
+                     color:0,0,0,1
+               Image:
+                  source:"prueba.jpg"
+               
+            Label:
+               canvas.before:
+                  Color: 
+                     rgba: 207/225, 207/225, 207/225, 1
+                  Rectangle:
+                     size: self.size
+                     pos: self.pos
+               size_hint_y:None
+               height:5
+      Label:
+         text:"Como en casa"
+         bold:True
+         color:0,0,0,1
+         canvas.before:
+            Color:
+               rgba: 49/255,235/225,220/225,1
+            Rectangle:
+               pos: self.pos
+               size: self.size
+         size_hint:1,0.075
+
+
+<RecipesWindow>
+   name:"recipes"
+   GridLayout:
+      cols:1
+      size: root.width, root.height
       GridLayout:
-         cols: 1
-         rows: 8
-         GridButton:
-            cols: 2
-            padding:10
-            on_press:root.mycall_back()
-            GridLayout:
-               size_hint_x:2
-               cols:1
-               rows:3
-               Label:
-                  text:"Titulo de la Receta"
-                  font_size: 20
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'top'
-                  color:0,0,0,1
-               Label:
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'middle'
-                  text:"Esta es una breve descripcion de la receta"
-                  color:0,0,0,1
-               Label:
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'bottom'
-                  text:"Filtro 1, Filtro 2, Filtro 3."
-                  color:0,0,0,1
-            Image:
-               source:"prueba.jpg"
-               
-         Label:
-            canvas.before:
-               Color: 
-                  rgba: 207/225, 207/225, 207/225, 1
-               Rectangle:
-                  size: self.size
-                  pos: self.pos
-            size_hint:1,0.015
+         cols:2
+         size_hint:1,0.075
+         canvas.before:
+            Color:
+               rgba: 49/255,235/225,220/225,1
+            Rectangle:
+               pos: self.pos
+               size: self.size
 
-         GridButton:
-            cols: 2
-            padding:10
-            on_press:root.mycall_back()
-            GridLayout:
-               size_hint_x:2
-               cols:1
-               rows:3
-               Label:
-                  text:"Titulo de la Receta"
-                  font_size: 20
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'top'
-                  color:0,0,0,1
-               Label:
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'middle'
-                  text:"Esta es una breve descripcion de la receta"
-                  color:0,0,0,1
-               Label:
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'bottom'
-                  text:"Filtro 1, Filtro 2, Filtro 3."
-                  color:0,0,0,1
-            Image:
-               source:"prueba.jpg"
-               
-         Label:
-            canvas.before:
-               Color: 
-                  rgba: 207/225, 207/225, 207/225, 1
-               Rectangle:
-                  size: self.size
-                  pos: self.pos
-            size_hint:1,0.015
+         TextInput:
+            padding:5,5
+         Image:
+            source:"lupa.png"
+            size_hint:0.3,0.3
 
-         GridButton:
-            cols: 2
-            padding:10
-            on_press:root.mycall_back()
-            GridLayout:
-               size_hint_x:2
-               cols:1
-               rows:3
-               Label:
-                  text:"Titulo de la Receta"
-                  font_size: 20
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'top'
-                  color:0,0,0,1
-               Label:
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'middle'
-                  text:"Esta es una breve descripcion de la receta"
-                  color:0,0,0,1
-               Label:
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'bottom'
-                  text:"Filtro 1, Filtro 2, Filtro 3."
-                  color:0,0,0,1
-            Image:
-               source:"prueba.jpg"
-               
-         Label:
-            canvas.before:
-               Color: 
-                  rgba: 207/225, 207/225, 207/225, 1
-               Rectangle:
-                  size: self.size
-                  pos: self.pos
-            size_hint:1,0.015         
-         GridButton:
-            cols: 2
-            padding:10
-            on_press:root.mycall_back()
-            GridLayout:
-               size_hint_x:2
-               cols:1
-               rows:3
-               Label:
-                  text:"Titulo de la Receta"
-                  font_size: 20
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'top'
-                  color:0,0,0,1
-               Label:
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'middle'
-                  text:"Esta es una breve descripcion de la receta"
-                  color:0,0,0,1
-               Label:
-                  text_size: self.size
-                  halign: 'left'
-                  valign: 'bottom'
-                  text:"Filtro 1, Filtro 2, Filtro 3."
-                  color:0,0,0,1
-            Image:
-               source:"prueba.jpg"
-               
-         Label:
-            canvas.before:
-               Color: 
-                  rgba: 207/225, 207/225, 207/225, 1
-               Rectangle:
-                  size: self.size
-                  pos: self.pos
-            size_hint:1,0.015
+      Label:
+         text:"Titulo de la Receta"
+            
+      Image:
+         source:"prueba.jpg"
+      
       Label:
          text:"Como en casa"
          bold:True
