@@ -1,3 +1,4 @@
+<GridButton>:
 <MainGrid>
    GridLayout:
       cols:1
@@ -5,7 +6,7 @@
       
       GridLayout:
          cols:2
-         size_hint:1,0.10
+         size_hint:1,0.075
          canvas.before:
             Color:
                rgba: 49/255,235/225,220/225,1
@@ -22,7 +23,7 @@
       
       GridLayout:
          cols:3
-         size_hint:1,0.10
+         size_hint:1,0.075
          Button:
             background_normal:""
             background_color: 219/255,247/225,38/225,1
@@ -43,24 +44,162 @@
             background_color: 219/255,247/225,38/225,1
             background_normal:""
       GridLayout:
-         cols: 2
+         cols: 1
+         rows: 8
+         GridButton:
+            cols: 2
+            padding:10
+            on_press:root.mycall_back()
+            GridLayout:
+               size_hint_x:2
+               cols:1
+               rows:3
+               Label:
+                  text:"Titulo de la Receta"
+                  font_size: 20
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'top'
+                  color:0,0,0,1
+               Label:
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'middle'
+                  text:"Esta es una breve descripcion de la receta"
+                  color:0,0,0,1
+               Label:
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'bottom'
+                  text:"Filtro 1, Filtro 2, Filtro 3."
+                  color:0,0,0,1
+            Image:
+               source:"prueba.jpg"
+               
          Label:
-            text:"Rapidas"
-         Image:
-            source:"prueba.jpg"
+            canvas.before:
+               Color: 
+                  rgba: 207/225, 207/225, 207/225, 1
+               Rectangle:
+                  size: self.size
+                  pos: self.pos
+            size_hint:1,0.015
+
+         GridButton:
+            cols: 2
+            padding:10
+            on_press:root.mycall_back()
+            GridLayout:
+               size_hint_x:2
+               cols:1
+               rows:3
+               Label:
+                  text:"Titulo de la Receta"
+                  font_size: 20
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'top'
+                  color:0,0,0,1
+               Label:
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'middle'
+                  text:"Esta es una breve descripcion de la receta"
+                  color:0,0,0,1
+               Label:
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'bottom'
+                  text:"Filtro 1, Filtro 2, Filtro 3."
+                  color:0,0,0,1
+            Image:
+               source:"prueba.jpg"
+               
          Label:
-            text:"Rapidas"
-         Image:
-            source:"prueba.jpg"
+            canvas.before:
+               Color: 
+                  rgba: 207/225, 207/225, 207/225, 1
+               Rectangle:
+                  size: self.size
+                  pos: self.pos
+            size_hint:1,0.015
+
+         GridButton:
+            cols: 2
+            padding:10
+            on_press:root.mycall_back()
+            GridLayout:
+               size_hint_x:2
+               cols:1
+               rows:3
+               Label:
+                  text:"Titulo de la Receta"
+                  font_size: 20
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'top'
+                  color:0,0,0,1
+               Label:
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'middle'
+                  text:"Esta es una breve descripcion de la receta"
+                  color:0,0,0,1
+               Label:
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'bottom'
+                  text:"Filtro 1, Filtro 2, Filtro 3."
+                  color:0,0,0,1
+            Image:
+               source:"prueba.jpg"
+               
          Label:
-            text:"Rapidas"
-         Image:
-            source:"prueba.jpg"
+            canvas.before:
+               Color: 
+                  rgba: 207/225, 207/225, 207/225, 1
+               Rectangle:
+                  size: self.size
+                  pos: self.pos
+            size_hint:1,0.015         
+         GridButton:
+            cols: 2
+            padding:10
+            on_press:root.mycall_back()
+            GridLayout:
+               size_hint_x:2
+               cols:1
+               rows:3
+               Label:
+                  text:"Titulo de la Receta"
+                  font_size: 20
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'top'
+                  color:0,0,0,1
+               Label:
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'middle'
+                  text:"Esta es una breve descripcion de la receta"
+                  color:0,0,0,1
+               Label:
+                  text_size: self.size
+                  halign: 'left'
+                  valign: 'bottom'
+                  text:"Filtro 1, Filtro 2, Filtro 3."
+                  color:0,0,0,1
+            Image:
+               source:"prueba.jpg"
+               
          Label:
-            text:"Rapidas"
-         Image:
-            source:"prueba.jpg"
-         
+            canvas.before:
+               Color: 
+                  rgba: 207/225, 207/225, 207/225, 1
+               Rectangle:
+                  size: self.size
+                  pos: self.pos
+            size_hint:1,0.015
       Label:
          text:"Como en casa"
          bold:True
@@ -71,4 +210,4 @@
             Rectangle:
                pos: self.pos
                size: self.size
-         size_hint:1,0.10
+         size_hint:1,0.075
