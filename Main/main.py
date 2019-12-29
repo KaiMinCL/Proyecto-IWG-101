@@ -15,7 +15,7 @@ class GridButton(ButtonBehavior, GridLayout):
 
 class MainGrid(GridLayout):
     def mycall_back(self):
-        print("hello")
+        print("Este boton esta funcionando")
     pass
 
 
