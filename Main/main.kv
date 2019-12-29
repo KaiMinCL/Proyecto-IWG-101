@@ -5,7 +5,7 @@
       
       GridLayout:
          cols:2
-         size_hint:1,0.15
+         size_hint:1,0.10
          canvas.before:
             Color:
                rgba: 49/255,235/225,220/225,1
@@ -22,8 +22,7 @@
       
       GridLayout:
          cols:3
-         row_default_height:40
-         row_force_default:True
+         size_hint:1,0.10
          Button:
             background_normal:""
             background_color: 219/255,247/225,38/225,1
@@ -44,8 +43,6 @@
             background_color: 219/255,247/225,38/225,1
             background_normal:""
       GridLayout:
-         row_default_height:100
-         row_force_default:True
          cols: 2
          Label:
             text:"Rapidas"
@@ -74,4 +71,4 @@
             Rectangle:
                pos: self.pos
                size: self.size
-         size_hint:1,0.15
+         size_hint:1,0.10
