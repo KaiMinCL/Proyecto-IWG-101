@@ -1,4 +1,3 @@
-
 import kivy
 from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
@@ -8,10 +7,15 @@ from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.button import ButtonBehavior
 
-Window.size = (360, 640)
-#Window.clearcolor = (1, 1, 1, 1)
+Window.size = 360, 640
+Window.clearcolor = 1,1,1,1
+
+class GridButton(ButtonBehavior, GridLayout):
+    pass
 
 class MainGrid(GridLayout):
+    def mycall_back(self):
+        print("hello")
     pass
 
 
